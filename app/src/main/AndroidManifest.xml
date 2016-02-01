@@ -17,12 +17,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SportsFactsActivity"
+        <activity
+            android:name=".SportsFactsActivity"
             android:label="Random Sports Fact"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".CrazyFactsActiviy"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".CrazyFactsActiviy"
             android:label="Random Crazy Fact"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".settings"></activity>
     </application>
 
 </manifest>
