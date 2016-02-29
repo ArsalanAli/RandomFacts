@@ -22,7 +22,7 @@
             android:label="Random Sports Fact"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".CrazyFactsActiviy"
+            android:name=".CrazyFactsActivity"
             android:label="Random Crazy Fact"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".settings"></activity>

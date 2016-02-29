@@ -1,13 +1,17 @@
 package com.example.arsalan.randomfacts;
 
 
+import android.content.Context;
+
 import java.util.Random;
 
 public class Facts {
+    FactsDB DB;
     private String facts[];
     private Random rand;
     private int currentfact;
-    Facts(){
+    Facts(Context context){
+        DB = new FactsDB(context);
         facts = new String[4];
         rand = new Random();
         currentfact = 0;
@@ -25,7 +29,7 @@ public class Facts {
         facts[3] = "Crazy fact 4";
     }
     public String GetCurrentFact() {
-        return facts[currentfact];
+        return DB.getfact();
     }
     public String GetRandomFact (){
         int temp;

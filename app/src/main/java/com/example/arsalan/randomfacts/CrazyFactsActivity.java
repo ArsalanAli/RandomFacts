@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class CrazyFactsActiviy extends AppCompatActivity {
+public class CrazyFactsActivity extends AppCompatActivity {
     private Facts facts;
     private TextView fact;
 
@@ -15,7 +15,7 @@ public class CrazyFactsActiviy extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crazy_facts_activiy);
-        facts = new Facts();
+        facts = new Facts(this);
         facts.SetCrazyFacts();
         fact = (TextView) findViewById(R.id.textView2);
         fact.setText(facts.GetCurrentFact());

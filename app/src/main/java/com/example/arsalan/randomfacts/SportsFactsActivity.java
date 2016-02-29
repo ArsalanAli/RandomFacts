@@ -15,7 +15,7 @@ public class SportsFactsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sports_facts);
-        facts = new Facts();
+        facts = new Facts(this);
         facts.SetSportsFacts();
         fact = (TextView) findViewById(R.id.textView2);
         fact.setText(facts.GetCurrentFact());

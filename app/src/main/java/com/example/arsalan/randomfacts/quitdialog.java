@@ -19,7 +19,7 @@ public class quitdialog extends DialogFragment {
                         Intent intent;
                         switch(which){
                             case 0:
-                                intent = new Intent(getActivity(), CrazyFactsActiviy.class);
+                                intent = new Intent(getActivity(), CrazyFactsActivity.class);
                                 startActivity(intent);
                                 break;
                             case 1:
