@@ -3,6 +3,7 @@ package com.example.arsalan.randomfacts;
 import android.app.DownloadManager;
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -39,8 +40,9 @@ public class FactsDB extends SQLiteOpenHelper{
     }
     public String getfact(){
         SQLiteDatabase db = getReadableDatabase();
-        String[] colums = {Sfacts};
-        return db.query(Facts_Table_Name, colums, null,null, null,null,null ).getString(1);
+        Cursor cursor = db.rawQuery("SELECT (Sfacts) FROM Facts;", null);
+        cursor.moveToFirst();
+        return cursor.getString(cursor.getColumnIndex(Sfacts));
     }
     public static synchronized FactsDB getsInstance(Context context){
         if (sInstance == null){
